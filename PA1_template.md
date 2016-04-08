@@ -180,7 +180,7 @@ Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minut
         library(lattice)
         avg_daily_pattern_na <- aggregate(steps ~ interval + is_weekend, raw_data_na, mean, na.rm=TRUE)
         xyplot(steps ~ interval | is_weekend, avg_daily_pattern_na, type="l", col="darkblue", 
-               main="activity pattern between weekday and weekend", ylim=c(0,250), layout=c(1,2), 
+               main="Activity pattern between weekday and weekend", ylim=c(0,250), layout=c(1,2), 
                ylab="Number of steps", xlab="Interval")
 ```
 
