@@ -27,8 +27,8 @@ Calculate the total number of steps taken per day
 Histogram of the total number of steps taken each day
 
 ```r
-        hist(steps_per_day$steps, xlab="Steps per day", main="Total number of steps taken each day"
-             ,ylim=c(0,30),col="lightblue")
+        hist(steps_per_day$steps, xlab="Steps per day", main="Total number of steps taken each day",
+             ylim=c(0,30),col="lightblue")
 ```
 
 ![](PA1_template_files/figure-html/hist_steps-1.png)
@@ -60,7 +60,8 @@ Calculate and report the mean and median of the total number of steps taken per 
 Time series plot (type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
 
 ```r
-        plot(avg_daily_pattern, type="l", col="darkblue", main="Average daily active pattern", ylim=c(0,250))
+        plot(avg_daily_pattern, type="l", col="darkblue", 
+             main="Average daily active pattern", ylim=c(0,250))
         abline(v=avg_daily_pattern[which.max(avg_daily_pattern$steps), ]$interval, col="grey")
 ```
 
